@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Catprod extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'desc',
+        'img',
+        'show',
+    ];
 }

@@ -15,6 +15,10 @@ class CreateCatprodsTable extends Migration
     {
         Schema::create('catprods', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('desc')->nullable();
+            $table->string('img');
+            $table->integer('show')->default(0);
             $table->timestamps();
         });
     }

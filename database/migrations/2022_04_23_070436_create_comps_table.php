@@ -15,6 +15,17 @@ class CreateCompsTable extends Migration
     {
         Schema::create('comps', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('email')->nullable();
+            $table->string('wa');
+            $table->string('fb')->nullable();
+            $table->string('ig')->nullable();
+            $table->string('yt')->nullable();
+            $table->string('fav');
+            $table->string('logo');
+            $table->string('slogan');
             $table->timestamps();
         });
     }

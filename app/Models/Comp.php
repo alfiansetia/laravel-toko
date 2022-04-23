@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Comp extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'phone',
+        'address',
+        'email',
+        'wa',
+        'fb',
+        'ig',
+        'yt',
+        'fav',
+        'logo',
+        'slogan',
+    ];
 }
