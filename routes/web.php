@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [HomeController::class, 'home'])->name('index');
+Route::get('/product', [HomeController::class, 'product'])->name('product');
+Route::get('/product/detail/{product}', [HomeController::class, 'productDetail'])->name('product.detail');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
+    'confirm' => false
+]);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -19,6 +19,7 @@ class Comp extends Model
         'yt',
         'fav',
         'logo',
+        'cover',
         'slogan',
     ];
 }

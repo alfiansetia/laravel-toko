@@ -25,6 +25,7 @@ class CreateCompsTable extends Migration
             $table->string('yt')->nullable();
             $table->string('fav');
             $table->string('logo');
+            $table->string('cover');
             $table->string('slogan');
             $table->timestamps();
         });

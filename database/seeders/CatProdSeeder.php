@@ -19,7 +19,9 @@ class CatProdSeeder extends Seeder
         File::cleanDirectory(public_path('img/catprod'));
         File::copy(public_path('img/old/catprod/1.jpg'), public_path('img/catprod/1.jpg'));
         File::copy(public_path('img/old/catprod/2.jpg'), public_path('img/catprod/2.jpg'));
-        
+        File::copy(public_path('img/old/catprod/3.jpg'), public_path('img/catprod/3.jpg'));
+        File::copy(public_path('img/old/catprod/4.jpg'), public_path('img/catprod/4.jpg'));
+
         Catprod::create([
             'name' => 'Loster',
             'desc' => 'Loster Terbaik',
@@ -31,6 +33,20 @@ class CatProdSeeder extends Seeder
             'name' => 'Batako',
             'desc' => 'Batako Terbaik',
             'img'  => '2.jpg',
+            'show' => 1
+        ]);
+
+        Catprod::create([
+            'name' => 'Genteng',
+            'desc' => 'Genteng Terbaik',
+            'img'  => '3.jpg',
+            'show' => 1
+        ]);
+
+        Catprod::create([
+            'name' => 'Bata Tempel',
+            'desc' => 'Bata Tempel Terbaik',
+            'img'  => '4.jpg',
             'show' => 1
         ]);
     }

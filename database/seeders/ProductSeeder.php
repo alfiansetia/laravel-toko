@@ -19,6 +19,7 @@ class ProductSeeder extends Seeder
         File::cleanDirectory(public_path('img/product'));
         File::copy(public_path('img/old/product/1.jpg'), public_path('img/product/1.jpg'));
         File::copy(public_path('img/old/product/2.jpg'), public_path('img/product/2.jpg'));
+        File::copy(public_path('img/old/product/3.jpg'), public_path('img/product/3.jpg'));
 
         Product::create([
             'catprod_id' => 1,
@@ -31,13 +32,23 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
-            'catprod_id' => 1,
+            'catprod_id' => 2,
             'name' => 'Batik 2',
             'price' => '900',
             'desc' => 'Loster Batik 2 Terbaik di indonesia',
             'img' => '2.jpg',
             'show' => 1,
             'is_fav' => 1,
+        ]);
+
+        Product::create([
+            'catprod_id' => 3,
+            'name' => 'Tempel',
+            'price' => '900',
+            'desc' => 'Loster Tempel Terbaik di indonesia',
+            'img' => '3.jpg',
+            'show' => 1,
+            'is_fav' => 0,
         ]);
     }
 }
