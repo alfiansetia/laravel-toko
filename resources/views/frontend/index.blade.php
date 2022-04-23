@@ -155,7 +155,7 @@
                                 </h5>
                             </div>
                             <div class="mbr-section-btn item-footer mt-2">
-                                <a href="" class="btn item-btn btn-info display-7">Selengkapnya &gt;</a>
+                                <a href="{{ route('galery.detail', $alb->id) }}" class="btn item-btn btn-info display-7">Selengkapnya &gt;</a>
                             </div>
                         </div>
                     </div>

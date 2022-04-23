@@ -62,13 +62,30 @@ class HomeController extends Controller
     {
         $comp = Comp::first();
         $prodfav = Product::where('show', 1)->where('is_fav', 1)->get();
-        $product = Product::find($product->id);
+        $product = Product::with('fotoprod')->find($product->id);
         return view('frontend.product_detail', compact(['comp', 'prodfav', 'product']));
     }
 
-    public function about(){
+    public function about()
+    {
         $comp = Comp::first();
         $prodfav = Product::where('show', 1)->where('is_fav', 1)->get();
         return view('frontend.about', compact(['comp', 'prodfav']));
+    }
+
+    public function galeryDetail(Album $album)
+    {
+        $comp = Comp::first();
+        $prodfav = Product::where('show', 1)->where('is_fav', 1)->get();
+        $album = Album::with('foto')->find($album->id);
+        return view('frontend.galery_detail', compact(['comp', 'prodfav', 'album']));
+    }
+
+    public function galery(Request $request)
+    {
+        $comp = Comp::first();
+        $prodfav = Product::where('show', 1)->where('is_fav', 1)->get();
+        $albums = Album::with('foto')->where('show', 1)->get();
+        return view('frontend.galery', compact(['comp', 'prodfav', 'albums']));
     }
 }

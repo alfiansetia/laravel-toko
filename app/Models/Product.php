@@ -17,4 +17,9 @@ class Product extends Model
         'show',
         'is_fav',
     ];
+
+    public function fotoprod()
+    {
+        return $this->hasMany(Fotoprod::class);
+    }
 }

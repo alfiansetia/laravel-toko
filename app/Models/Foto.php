@@ -14,4 +14,9 @@ class Foto extends Model
         'name',
         'desc',
     ];
+
+    public function album()
+    {
+        return $this->belongsTo(Album::class);
+    }
 }

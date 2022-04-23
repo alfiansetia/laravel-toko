@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             CatProdSeeder::class,
             ProductSeeder::class,
             AlbumSeeder::class,
-            FotoSeeder::class
+            FotoSeeder::class,
+            FotoprodSeeder::class,
         ]);
     }
 }

@@ -43,7 +43,7 @@
             <div class="container">
                 <div class="navbar-brand">
                     <span class="navbar-logo">
-                        <a href="">
+                        <a href="{{ route('index') }}">
                             <img src="{{ asset('img/comp') }}/{{ $comp->logo }}" alt="{{ $comp->name }}" style="height: 3rem" />
                         </a>
                     </span>
@@ -75,7 +75,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link text-black text-primary display-4" href="">
+                            <a class="nav-link link text-black text-primary display-4" href="{{ route('galery') }}">
                                 <span class="mobi-mbri mobi-mbri-photos mbr-iconfont mbr-iconfont-btn"></span>GALERI
                             </a>
                         </li>

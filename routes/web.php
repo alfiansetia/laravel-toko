@@ -23,6 +23,8 @@ Route::get('/', [HomeController::class, 'home'])->name('index');
 Route::get('/product', [HomeController::class, 'product'])->name('product');
 Route::get('/product/detail/{product}', [HomeController::class, 'productDetail'])->name('product.detail');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/galery', [HomeController::class, 'galery'])->name('galery');
+Route::get('/galery/detail/{album}', [HomeController::class, 'galeryDetail'])->name('galery.detail');
 
 
 Auth::routes([
