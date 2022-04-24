@@ -18,6 +18,11 @@ class Product extends Model
         'is_fav',
     ];
 
+    public function catprod()
+    {
+        return $this->belongsTo(Catprod::class);
+    }
+
     public function fotoprod()
     {
         return $this->hasMany(Fotoprod::class);

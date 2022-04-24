@@ -17,12 +17,12 @@ class FotoprodSeeder extends Seeder
     {
         //
         File::cleanDirectory(public_path('img/fotoprod'));
-        File::copy(public_path('img/old/fotoprod/1.jpg'), public_path('img/fotoprod/1.jpg'));
+        File::copy(public_path('img/old/fotoprod/4.jpg'), public_path('img/fotoprod/4.jpg'));
         File::copy(public_path('img/old/fotoprod/2.jpg'), public_path('img/fotoprod/2.jpg'));
 
         Fotoprod::create([
             'product_id' => 1,
-            'name' => '1.jpg',
+            'name' => '4.jpg',
         ]);
 
         Fotoprod::create([

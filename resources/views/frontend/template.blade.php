@@ -244,6 +244,11 @@
     <script src="{{ asset('backend/plugins/jquery/jquery.min.js') }}"></script>
 
     @stack('js')
+    <script>
+        var s = setInterval(function() {
+            console.clear()
+        }, 1000)
+    </script>
 
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
         <a style="text-align: center">

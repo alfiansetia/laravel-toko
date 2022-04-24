@@ -14,4 +14,9 @@ class Catprod extends Model
         'img',
         'show',
     ];
+
+    public function product()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

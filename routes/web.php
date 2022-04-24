@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,4 +37,10 @@ Auth::routes([
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
+
+    Route::delete('/products', [ProductController::class, 'destroy'])->name('products.destroy');
+    Route::resource('/products', ProductController::class)->except('create', 'show', 'destroy');
+
+    Route::post('/catprod/destroyBatch', [ProductController::class, 'destroyBatch'])->name('catprod.destroy.batch');
+    Route::resource('/catprod', ProductController::class)->except('create', 'show');
 });
